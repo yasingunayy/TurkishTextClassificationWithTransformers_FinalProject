@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Şikayet Sonuç</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .nvb-height {
+        height: 150px !important;
+      }
+      .mtop {
+        margin-top: 100px;
+      }
+      .bg-special {
+        background: rgb(0, 136, 255);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 136, 255, 0) 0%,
+          rgba(0, 119, 255, 1) 100%
+        );
+      }
+      .bg-btn {
+        background: rgb(13, 109, 255);
+        background: radial-gradient(
+          circle,
+          rgba(13, 109, 255, 1) 0%,
+          rgba(4, 202, 237, 0.5) 100%
+        );
+      }
+      .border-right {
+        border-left: 1px solid blue;
+      }
+      .nvb-text {
+        margin-bottom: 70px;
+      }
+      .ff-text {
+        font-family: "Playfair Display", serif;
+        letter-spacing: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar bg-special nvb-height pt-0">
+      <div class="container mb-5">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="{{ url_for('static', filename='images/akdeniz-logo-top.png') }}"
+            alt="Logo"
+            width="150px"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <div class="fs-1 text-white nvb-text ff-text">Akdeniz Belediyesi</div>
+      </div>
+    </nav>
+
+    <div class="container row mx-auto mtop">
+      <div class="col-6 border-end">
+        <h3 class="text-center mt-5 pb-3 mb-3 ff-text border-bottom">
+          Şikayetinizin
+          <p class="text-center fs-3 text-warning mt-2">{{ prediction }}</p>
+          birimimiz ile ilgili olduğunu düşünmekteyiz.
+        </h3>
+        <h5 class="text-center mt-3 mb-3 ff-text">
+          Bir sorun olduğunu düşünüyorsanız aşağıdaki butondan şikayet sayfasına
+          geri dönerek yeni bir şikayet metni oluşturabilirsiniz.
+        </h5>
+      </div>
+      <div class="col-6">
+        <h4 class="text-center mt-5 pb-4 mb-3 ff-text border-bottom">
+          Size daha iyi hizmet verebilmemiz için lütfen
+          <p class="text-center fs-4 text-warning mt-2">{{ prediction }}</p>
+          birimimiz ile iletişime geçiniz.
+        </h4>
+        <h4 class="text-center mt-3 mb-3 ff-text">
+          <p class="text-center fs-4 text-warning mt-2">{{ prediction }}</p>
+          Birimi Dahili Numarası:
+          <p class="text-center fs-4 text-warning mt-2">{{ contactNum }}</p>
+        </h4>
+      </div>
+      <div class="col-md-4 col-1 mtop"></div>
+      <div class="col-md-4 col-10 mtop">
+        <a
+          id="turnBackButton"
+          href="/"
+          class="btn bg-btn ff-text fw-semibold text-white shadow-lg w-100 mt-3"
+          >Başka Bir Şikayet İletin</a
+        >
+      </div>
+      <div class="col-md-4 col-1 mtop"></div>
+    </div>
+
+    <script>
+      const turnBack = document.getElementById("turnBackButton");
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          turnBack.click();
+        }
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
