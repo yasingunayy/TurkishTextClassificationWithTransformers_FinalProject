@@ -1,5 +1,10 @@
 # Turkish Text Classification With Transformers
 
+
+![arayuz01](https://github.com/yasingunayy/TurkishTextClassificationWithTransformers_FinalProject/assets/121442500/44383ff5-9073-4a98-8941-2221198f308e)
+
+![arayuz02](https://github.com/yasingunayy/TurkishTextClassificationWithTransformers_FinalProject/assets/121442500/f336d566-6be6-4bac-b9fd-3550840ab37d)
+
 Bu metin sınıflandırma uygulaması, belediyelere gelen yazılı şikayetlerin ilgili birim ve konu bakımından
 sınıflandırılmasını kapsamaktadır.
 
