@@ -15,7 +15,7 @@ sınıflandırılmasını kapsamaktadır.
 - Bu modelde https://github.com/stefan-it/turkish-bert modeli base model olarak kullanılmıştır.
 - Model 8 farklı kategoride sınıflandırma işlemi gerçekleştirmektedir.
 - Uygulama, Fırat Üniversitesi Bilgisayar Mühendisliği Bölümünde Bitirme Projesi olarak sunulmuştur.
-- Uygulama, Python 3.11.7 sürümü üzerinde yapılandırılmıştır.Farklı sürümlerde, kullanılan kütüphane ve Frameworklerden kaynaklı olarak hatalar ile karşılaşılabilir.
+- Uygulama, Python 3.11.7 sürümü üzerinde yapılandırılmıştır.Farklı sürümlerde, kullanılan kütüphanelerde kaynaklı olarak hatalar ile karşılaşılabilir.
 - Modelde kullanılan sınıflar aşağıda görüldüğü gibi tanımlanmıştır.
 
 code_to_label={
